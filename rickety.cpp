@@ -4,29 +4,29 @@
 int arr1[6] ={5,10,20,25},arr2[6];
 int f1,f2,l1,l2;
 int time=0;
+
 void decisionFunc();
 void toReached(int,int);
 void backWait(int);
- //arr1 = array for waiting
- //arr2 = array for reached
+
+ //arr1 = array for waiting queue
+ //arr2 = array for reached queue
+
  //f1 = front flag for arr1
  //l1 = end flag for arr1
+
  //f2 = front tab for arr2
  //l2 = end tag for arr2
+
  //time = for calculating total time
+
+//decisionFunc = A function to see whether its the last pair waiting to be crossed or not.
 
 
 void decisionFunc()
 {
- if( (f1+1) == l1 )
- {
-  toReached(arr1[f1],arr1[l1]);
- }
- else
- {
  toReached(arr1[f1],arr1[f1+1]);
  f1 = f1+2;
- }
 }
 
 void toReached(int a, int b)
